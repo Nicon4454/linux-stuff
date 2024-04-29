@@ -19,3 +19,4 @@ alias cpv='rsync -ah --info=progress2'
 alias tcn='mv --force -t ~/.local/share/Trash '
 # updates upgrades and runs auto remove all in one command
 alias uuar='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
+alias top='bpytop'
