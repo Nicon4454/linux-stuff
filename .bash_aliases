@@ -2,8 +2,8 @@
 #########################
 ## by dan clark        ##
 ## created 10/06/2020  ##
-## updated 04/29/2024  ##
-## V. 0.6              ##
+## updated 05/02/2024  ##
+## V. 0.7              ##
 #########################
 #########################
 # ls aliases
@@ -13,7 +13,7 @@ alias l='ls -CF'
 alias lt='ls --human-readable --size -1 -S --classify'
 alias left='ls -t -1'
 alias count='find . -type f | wc -l'
-alias df= 'df -H'
+
 
 # other aliases
 # adds a progress bar to the cp command
