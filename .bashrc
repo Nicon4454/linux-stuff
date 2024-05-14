@@ -39,7 +39,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 ####### Prompt
-PS1='\[\e[33m\][\[\e[92;1m\]\u\[\e[0m\]@\[\e[32m\]\h\[\e[33m\]]\[\e[0m\] \[\e[33m\][\[\e[0m\]\A\[\e[33m\]]\n[\[\e[94;1m\]\w\[\e[0;33m\]]\[\e[0m\] \[\e[93m\]:\[\e[0m\]\$ '
+# Regular User Prompt
+if [ "$(id -u)" -ne 0 ]; then
+     PS1='\[\e[33m\][\[\e[92;1m\]\u\[\e[0m\]@\[\e[32m\]\h\[\e[33m\]]\[\e[0m\] \[\e[33m\][\[\e[0m\]\A\[\e[33m\]]\n[\[\e[94;1m\]\w\[\e[0;33m\]]\[\e[0m\] \[\e[93m\]:\[\e[0m\]\$ '    
+else
+# Root User Prompt
+    PS1='\[\e[33m\][\[\e[91;1m\]\u\[\e[0m\]@\[\e[91m\]\h\[\e[33m\]]\[\e[0m\] \[\e[33m\][\[\e[91m\]\A\[\e[33m\]]\n[\[\e[94;1m\]\w\[\e[0;33m\]]\[\e[0m\] \[\e[93m\]:\[\e[91m\]\$\[\e[0m\]'
+fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
