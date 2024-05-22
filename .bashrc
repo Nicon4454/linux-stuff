@@ -37,6 +37,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+#### Set the terminal
+TERM=xterm-256colors
 
 ####### Prompt
 # Regular User Prompt
